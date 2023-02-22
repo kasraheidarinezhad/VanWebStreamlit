@@ -4,7 +4,7 @@
 ### An EDA Case Study: Real Estate in Metro Vancouver, BC, Canada
 In this project, we have scraped, prepared, and analyzed the housing prices in British Columbia. We have also done some visualizations in the real estate market and proposed some ML methods for predicting housing prices with Python. This project includes:
 * **Section 1** Introduction
-* **Section 2** Creating data source with Web Scraping, data cleaning, missing values and utliers
+* **Section 2** Creating data source with Web Scraping, data cleaning, missing values and outliers
 * **Section 3** Data visualization (with Python libraries and Tableau)
 * **Section 4** Database, SQL and Query
 * **Section 5** Statistical data modeling (LRM using sklearn library), Handle of big data workloads with Apache Spark
@@ -13,7 +13,7 @@ In this project, we have scraped, prepared, and analyzed the housing prices in B
 !📢 [Check out it here!](https://drive.google.com/file/d/1fOaFymV96A8REwk2QDubnTWdYC8ZLB4w/view)
 
 #### A Visualization Dashboard, Housing Price in Metro Vancouver, BC, Canada
-In this part we created a dashboard to visualization previuse project, it includes map, line-chart, histogram and... categorized by _town_ in province.
+In this part we created a dashboard to visualization previous project, it includes map, line-chart, histogram and... categorized by _town_ in province.
 !📢 [Check out it here!](https://share.streamlit.io/kasra.Heidarinezhad/VancouverRS/app.py)
 
 ![Vancouver image](images/VancouverVS.png)
