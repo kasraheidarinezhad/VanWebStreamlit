@@ -4,10 +4,18 @@
 ### An EDA Case Study: Real Estate in Metro Vancouver, BC, Canada
 In this project, we have scraped, prepared, and analyzed the housing prices in British Columbia. We have also done some visualizations in the real estate market and proposed some ML methods for predicting housing prices.
 Check out the website here
+</br>
 
-![Vancouver image](demo/VancouverRS1.png)
+![Vancouver image](images/VancouverRS.png)
+!📢 [Check out it here!](/Portfolio_AnalyisofRealEstateListinginVancouver.pdf)
 
+<br>
+### A Visualization Dashboard, Housing Price in Metro Vancouver, BC, Canada
+In this project, we have scraped, prepared, and analyzed the housing prices in British Columbia. We have also done some visualizations in the real estate market and proposed some ML methods for predicting housing prices.
+Check out the website here
+![Vancouver image](images/VancouverVS.png)
 !📢 [Check out it here!](https://share.streamlit.io/kasra.Heidarinezhad/VancouverRS/app.py)
+</br>
 
 ****
 
