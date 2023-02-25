@@ -53,26 +53,31 @@ with st.container():
         dfr = rdf.query('48 < latitude < 51')
 
         st.pydeck_chart(pdk.Deck(
-        #map_style = "mapbox://styles/mapbox/streets-v12" ,#None,
+        map_style=None,
         initial_view_state=pdk.ViewState(
-        latitude=dfr.latitude.mean(), longitude=dfr.longitude.mean(),
-        zoom=11, pitch=50,
+        latitude=49,
+        longitude=-122,
+        zoom=11,
+        pitch=50,
         ),
         layers=[
         pdk.Layer(
-           'ScatterplotLayer', #'HexagonLayer',
+           'HexagonLayer',
            data=dfr,
-           get_position='[longitude , latitude]',
-           radius=50, elevation_scale=14, elevation_range=[0, 500],
-           pickable=True, extruded=True,
-            ),
+           get_position='[longitude, latitude]',
+           radius=200,
+           elevation_scale=4,
+           elevation_range=[0, 1000],
+           pickable=True,
+           extruded=True,
+        ),
         pdk.Layer(
             'ScatterplotLayer',
             data=dfr,
-            get_position='[longitude , latitude]',
-            get_color='[200, 30, 0, 160]', get_radius=50,
-            ), ],
-        ))
+            get_position='[longitude, latitude]',
+            get_color='[200, 30, 0, 160]',
+            get_radius=200,
+        ), ],))
 
     with col2:
         plost.area_chart(data=rdf, x='Price', y=dict(field='Area', aggregate='mean'), color='Beds', height=530)
