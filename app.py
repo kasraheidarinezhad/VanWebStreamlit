@@ -55,19 +55,19 @@ with st.container():
         st.pydeck_chart(pdk.Deck(
         map_style=None,
         initial_view_state=pdk.ViewState(
-        latitude=49,
-        longitude=-122,
+        latitude = dfr.latitude.mean(),
+        longitude = dfr.longitude.mean(),
         zoom=11,
         pitch=50,
         ),
         layers=[
         pdk.Layer(
-           'HexagonLayer',
+           'ScatterplotLayer', #'HexagonLayer',
            data=dfr,
            get_position='[longitude, latitude]',
-           radius=200,
-           elevation_scale=4,
-           elevation_range=[0, 1000],
+           radius=50,
+           elevation_scale=14,
+           elevation_range=[0, 500],
            pickable=True,
            extruded=True,
         ),
@@ -76,7 +76,7 @@ with st.container():
             data=dfr,
             get_position='[longitude, latitude]',
             get_color='[200, 30, 0, 160]',
-            get_radius=200,
+            get_radius=50,
         ), ],))
 
     with col2:
@@ -100,13 +100,20 @@ with st.container():
     st.write("---")
     col1, col2, col3 = st.columns(3)
     with col1:
+        with st.expander('Know more...'):
+            st.write("Item price")
         plost.line_chart(data=rdf,  x='ZipCode',  y='Price', height=450)
 
     with col2:
-        st.caption("Broker List")
-        st.dataframe(rdf.Broker.unique(), use_container_width=True)
+        with st.expander('Listing in the town by following Brokers'):
+            st.write("They are active brokers in the selected town")
+        #st.caption("Broker List")
+        st.dataframe(rdf.Broker.unique(), width=880)
+
     
     with col3:
+        with st.expander('Know more...'):
+            st.write("Correlation between Number of beds and price")
         plost.donut_chart(data=rdf, theta='Price', color='Beds', height=450)
 # Row D ---------------------------------------
 with st.container():
@@ -119,4 +126,4 @@ with st.container():
         plost.xy_hist(data=rdf, x='Price', y='Area', x_bin=dict(maxbins=20),  y_bin=dict(maxbins=20),  height=400)
   
     with col3:
-        plost.bar_chart(data=rdf, bar='Price', value='Area', width=300, pan_zoom='Beds')
+        plost.bar_chart(data=rdf, bar='Price', value='Area', width=600, pan_zoom='Beds')
