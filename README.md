@@ -9,11 +9,13 @@ In this project, we have scraped, prepared, and analyzed the housing prices in B
 * **Section 4** Database, SQL and Query
 * **Section 5** Statistical data modeling (LRM using sklearn library), Handle of big data workloads with Apache Spark
 * **Section 6** Building a data pipeline with Google Dataflow and Apache Beam
+* **Section 7** Creating Dashboard with Streamlit
+* **Section 8** Conclusion
 
-!📢 [Check out it here!](https://drive.google.com/file/d/1fOaFymV96A8REwk2QDubnTWdYC8ZLB4w/view)
+!📢 [Check out it here!](https://drive.google.com/file/d/1FskLaFpbA7hmKNxMKz-IbrkbenTRlkOU/view?usp=sharing)
 
 #### A Visualization Dashboard, Housing Price in Metro Vancouver, BC, Canada
-In this part we created a responsive dashboard to visualization previous project, it includes map, line-chart, histogram and... categorized by _town_ in province.
+In this part we created a responsive dashboard to visualization this project, it includes map, line-chart, histogram and... categorized by _town_ in province.
 !📢 [Check out it here!](https://kasraheidarinezhad-vanwebstreamlit-app-819wyp.streamlit.app/)
 
 ![Vancouver image](images/VancouverVS.png)
