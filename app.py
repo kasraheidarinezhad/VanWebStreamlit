@@ -108,13 +108,13 @@ with st.container():
         with st.expander('Listing in the town by following Brokers'):
             st.write("They are active brokers in the selected town")
         #st.caption("Broker List")
-        st.dataframe(rdf.Broker.unique(), width=880)
+        st.dataframe(rdf.Broker.unique())
 
     
     with col3:
         with st.expander('Know more...'):
             st.write("Correlation between Number of beds and price")
-        plost.donut_chart(data=rdf, theta='Price', color='Beds', height=450)
+        plost.donut_chart(data=rdf, theta='Price', color='Beds')
 # Row D ---------------------------------------
 with st.container():
     st.write("---")
